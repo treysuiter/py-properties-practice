@@ -94,6 +94,9 @@ class Student():
             return(f"{self.__firstName} {self.__lastName}")
         except AttributeError:
             return "Full Name Not Entered"
+    
+    def __str__(self):
+        return f"{self.fullName} is {self.age} years old and is in cohort {self.cohort}."
    
 
 
@@ -101,4 +104,8 @@ fred = Student()
 fred.firstName = "fred"
 fred.lastName = "smith"
 fred_fullName = fred.fullName
-print(fred_fullName)
+fred.age = 35
+fred.cohort = 39
+
+# print(fred_fullName)
+print(fred)
